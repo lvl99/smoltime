@@ -1,0 +1,59 @@
+{
+  "name": "smoltime",
+  "version": "1.0.0",
+  "description": "This time lib is very smol",
+  "browser": "./dist/smoltime.umd.js",
+  "main": "./dist/smoltime.cjs.js",
+  "module": "./dist/smoltime.esm.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "lint": "eslint 'index.ts' 'lib/**/*.ts' -c .eslintrc.json --ignore-path .lintignore",
+    "lint:fix": "eslint 'index.ts' 'lib/**/*.ts' -c .eslintrc.json --ignore-path .lintignore --fix",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "pre-publish": "npm run lint && npm run build && npm run test"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "time"
+  ],
+  "author": "Matt Scheurich <matt@lvl99.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lvl99/smoltime.git"
+  },
+  "homepage": "https://github.com/lvl99/smoltime",
+  "bugs": "https://github.com/lvl99/smoltime/issues",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.13",
+    "@types/lodash": "^4.14.133",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-jest": "^24.8.0",
+    "chalk": "^2.4.2",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
+    "prettier": "^1.17.1",
+    "rename-extension": "^3.0.0",
+    "rollup": "^1.13.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.1",
+    "rollup-plugin-terser": "^5.0.0",
+    "ts-jest": "^24.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.5.1",
+    "winston": "^3.2.1"
+  }
+}
